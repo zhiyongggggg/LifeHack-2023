@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Post
+{% endblock %}
+
+{% block main %}
+<section class="forum">
+    <div class="post-form">
+        <h2 style="background-color: white;">Create a New Post</h2>
+        <form action="/newpost" method="post" class="post-form">
+            <input type="text" autocomplete="off" placeholder="Title" name="new_post_title" class="input-field">
+            <textarea placeholder="What's on your mind?" name="new_post_content" class="textarea-field" oninput="checkCharacterLimit(this, 150)"></textarea>
+            <input type="text" autocomplete="off" placeholder="Time" name="new_post_time" class="input-field">
+            <input type="text" autocomplete="off" placeholder="Place" name="new_post_place" class="input-field">
+            <input type="text" autocomplete="off" placeholder="Visible to which group?" name="new_post_access" class="input-field">
+            <input type="submit" value="Post It!" class="submit-button">
+        </form>
+    </div>
+</section>
+
+<style>
+    .forum .post-form {
+        background-color: #FFFFFF;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .forum .post-form h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .forum .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #DDDDDD;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .forum .textarea-field {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #DDDDDD;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .forum .submit-button {
+        padding: 10px 20px;
+        background-color: #4B56D2;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    function checkCharacterLimit(textarea, limit) {
+        if (textarea.value.length > limit) {
+            textarea.value = textarea.value.substr(0, limit); // Trim the text to the character limit
+        }
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Group
+{% endblock %}
+
+{% block main %}
+<section>
+    <div class="container">
+        <h2>Create A Group</h1>
+        <div class="loginbars">
+            <form action="/creategroup" method="POST">
+                <div>
+                    <input type="text" autocomplete="off" placeholder="Group Name" name="groupname" minlength=2 maxlength=20>
+                </div>
+                <div>
+                    <input type="password" autocomplete="off" placeholder="Password" name="password" minlength=8 maxlength=20>
+                </div>
+                <div>
+                    <input type="password" autocomplete="off" placeholder="Reconfirm Password" name="rpassword" minlength=8 maxlength=20>
+                </div>
+                <div>
+                    <input type="submit" value="Create Group">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

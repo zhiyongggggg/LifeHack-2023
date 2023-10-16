@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Offun: {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="../static/mainstyle.css">
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <a class="logolink" href="/"><img class="logo" src="static/logo.svg" alt="logo"></a>
+            <div class="username">Username: {{ username }}</div>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/newpost">Post</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                    <li><a href="/joingroup">Join Group</a></li>
+                    <li><a href="/creategroup">Create Group</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                </ul>
+            </nav>
+            <a class="logout" href="/logout"><button>Logout</button></a>
+        </header>
+        {% block main %}{% endblock %}
+    </body>
+</html>
+

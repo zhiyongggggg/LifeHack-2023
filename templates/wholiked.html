@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Likes
+{% endblock %}
+
+{% block main %}
+    <section class="more_data post-feed">
+        {% for like in likes %}
+            <div>{{ like["username"] }}</div>
+        {% endfor %}
+    </section>
+{% endblock %}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Offun</title>
+        <link rel="stylesheet" href="../static/home.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="static/Offun.png" alt="logo">
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div class="container">
+                <h1>Welcome</h1>
+                <h3>Connect, Collaborate, and Thrive Together in our Virtual Community!</h3>
+                <div class="loginbars">
+                    <form action="/login" method="POST">
+                        <div>
+                            <input type="text" autocomplete="off" placeholder="Username" name="username">
+                        </div>
+                        <div>
+                            <input type="password" autocomplete="off" placeholder="Password" name="password">
+                        </div>
+                        <div>
+                            <input style="color:white;" type="submit" value="Login">
+                        </div>
+                    </form>
+                    <div style="color: #82C3EC; padding-top: 40px;">
+                        Don't have an account? Click here to register for one.
+                        <form action="/register" method="get">
+                          <input style="color: white;" type="submit" value="Register">
+                        </form>
+                    </div>
+        </section>
+
+    </body>
+</html>

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+    <div>Username: {{ username }}</div>
+
+    <section class="more_data post-feed">
+        {% for group in groupList %}
+            <div id="group-list">
+                {{ group[0]["group_name"] }}
+            </div>
+        {% endfor %}
+    </section>
+
+    <section class="more_data post-feed">
+        {% for feed in allFeeds %}
+            {% if feed["userID"] == user_id %}
+                <div class="individual-post-box">
+                    <div class="post-component post-title">{{ feed["post_title"] }}</div>
+                    <div class="post-component post-user">by: {{ feed["username"] }} @ {{ feed["time_posted"] }}</div>
+                    <div class="post-component post-eventplace">Place: {{ feed["event_place"] }}</div>
+                    <div class="post-component post-eventtime">Time: {{ feed["event_time"] }}</div>
+                    <div class="post-component post-content">{{ feed["post_content"] }}</div>
+                    <form class="index-upvote post-component" action="/likepost" method="post">
+                        <input id="post-likebtn" type="submit" value="Like">
+                    </form>
+                    <div class="post-component post-likecount">{{ feed["upvote_count"] }} Likes</div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </section>
+{% endblock %}

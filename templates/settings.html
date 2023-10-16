@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block main %}
+<section class="settings">
+    <div class="settingspage">
+        <h2>Change Password</h2>
+        <form action="/changepassword" method="post" class="changepassword">
+            <input type="password" placeholder="Current Password" name="oldpassword">
+            <input type="password" placeholder="New Password" name="password">
+            <input type="password" placeholder="Reconfirm New Password" name="rpassword">
+            <input type="submit" value="Change Password">
+        </form>
+    </div>
+</section>
+{% endblock %}
