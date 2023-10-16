@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/open-sans');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #F1F6F5;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+    height: 7%;
+    width: 10%;
+    cursor: pointer;
+    margin-right: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+li, a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FEFFFF;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 1%;
+    background-color: #4B56D2;
+}
+
+.nav__links {
+    list-style: none;
+    background-color: #4B56D2;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 15px;
+    border: none;
+    background-color: #4B56D2;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    background-color: #4B56D2;
+}
+
+.nav__links li a:hover {
+    color: #0088a9
+}
+
+.container {
+    /* border: 15px solid white; */
+    width: 70%;
+    height: 60vh;
+    /* color: #FEFFFF; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.loginbars {
+    padding: 50px
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    color: #472183;
+    text-decoration: none;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #82C3EC;
+    text-decoration: none;
+}
+
+input[type=text]{
+width: 40%;
+padding: 8px 20px;
+margin: 4px 0;
+box-sizing: border-box;
+border: 2px solid #557A95;
+border-radius: 4px;
+text-align: center;
+color: black;
+}
+
+input[type=password]{
+width: 40%;
+padding: 8px 20px;
+margin: 4px 0;
+box-sizing: border-box;
+border: 2px solid #557A95;
+border-radius: 4px;
+text-align: center;
+color: black;
+}
+
+input[type=text]:focus {
+background-color: #82C3EC;
+color: white;
+}
+
+input[type=password]:focus {
+background-color: #82C3EC;
+color: white;
+}
+
+input[type=submit]{
+width: 30%;
+padding: 8px 20px;
+margin: 4px 0;
+box-sizing: border-box;
+border: 2px solid #4B56D2;
+border-radius: 4px;
+text-align: center;
+color: black;
+background-color: #4B56D2;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(0,136,169,0.8);
+}
